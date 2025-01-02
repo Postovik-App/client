@@ -1,0 +1,6 @@
+@import url("./normalize.css");
+@import url("/src/shared/fonts/SFMono/stylesheet.css");
+
+html {
+    font-family: 'SFMono';
+}
