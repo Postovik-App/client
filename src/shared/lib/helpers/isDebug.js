@@ -5,4 +5,4 @@ export const isDebug = () => {
     const startParamsDebug = launchParams.startParam == 'debug'
   
     return startParamsDebug || import.meta.env.DEV
-  }
+}
