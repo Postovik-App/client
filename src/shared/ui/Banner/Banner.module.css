@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 67px;
+    border-radius: 15px;
+}
+
+.banner {
+    display: flex;
+    padding: 12px;
+    border-radius: 15px;
+}
+
+.text__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+
+.button__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 15px;
+}

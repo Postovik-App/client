@@ -7,6 +7,7 @@ import {
     $debug,
     init as initSDK,
 } from "@telegram-apps/sdk-react";
+import initTheme from "@/app/helpers/initTheme.js";
 
 export function init(debug) {
     $debug.set(debug)
@@ -35,4 +36,6 @@ export function init(debug) {
 
     miniApp.bindCssVars()
     themeParams.bindCssVars()
+
+    initTheme();
 }
