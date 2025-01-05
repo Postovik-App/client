@@ -4,6 +4,7 @@ import {
     themeParams,
     miniApp,
     initData,
+    mainButton,
     $debug,
     init as initSDK,
 } from "@telegram-apps/sdk-react";
@@ -23,6 +24,7 @@ export function init(debug) {
 
     backButton.mount()
     miniApp.mount()
+    mainButton.mount()
     themeParams.mount()
     initData.restore();
     void viewport

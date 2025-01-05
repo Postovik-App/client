@@ -6,6 +6,7 @@
     --secondary-bg-color: #1C1C1E;
     --text-color: var(--tg-theme-text-color);
     --button-bg-color: var(--tg-theme-button-color);
+    --hint-color: #B2B2B2
 }
 
 html {
