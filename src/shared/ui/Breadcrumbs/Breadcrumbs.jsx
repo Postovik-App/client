@@ -1,9 +1,10 @@
 import Caption from "@/shared/ui/Caption/Caption.jsx";
+import classNames from "@/shared/lib/helpers/classNames.js";
 import styles from './Breadcrumbs.module.css';
 
-export default function Breadcrumbs({children}) {
+export default function Breadcrumbs({children, className}) {
     return (
-        <Caption className={styles.breadcrumbs} size={15}>
+        <Caption className={classNames(styles.breadcrumbs, className)} size={15}>
             {children}
         </Caption>
     );
