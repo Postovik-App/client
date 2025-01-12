@@ -16,8 +16,14 @@ html {
 }
 
 body {
-    padding: 15px 15px;
     color: var(--text-color);
     overflow: hidden;
+    height: 100vh;
     background-color: var(--secondary-bg-color);
+}
+
+#root {
+    padding: 15px 15px;
+    overflow-y: scroll;
+    height: 100%;
 }
