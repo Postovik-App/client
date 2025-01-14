@@ -1,6 +1,21 @@
 @import url("./normalize.css");
 @import url("/src/shared/fonts/SFMono/stylesheet.css");
 
+::-webkit-scrollbar-thumb {
+    border-radius: 5px !important;
+    border: 3px solid transparent !important;
+    background-color: rgba(255, 255, 255, 0.32549) !important;
+    background-clip: content-box !important;
+}
+
+::-webkit-scrollbar {
+    border-radius: 5px !important;
+    border: 3px solid transparent !important;
+    background-color: rgba(255, 255, 255, 0.101961) !important;
+    background-clip: content-box !important;
+    width: 10px !important;
+}
+
 :root {
     --bg-color: #212121;
     --secondary-bg-color: #1C1C1E;
@@ -10,12 +25,30 @@
     --link-color: var(--tg-theme-link-color);
 }
 
+* {
+    outline: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-moz-focus-inner {
+    border: 0
+}
+
+::-webkit-scrollbar {
+    display: none
+}
+
 html {
     font-family: 'SFMono', Arial, serif;
     user-select: none;
 }
 
 body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    display: block;
     color: var(--text-color);
     overflow: hidden;
     height: 100vh;

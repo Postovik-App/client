@@ -16,6 +16,7 @@ const Input = forwardRef(function Input(
     return (
         <input
             ref={ref}
+            autoComplete="off"
             className={classNames(styles.input, className)}
             onChange={onChange}
             placeholder={placeholder}

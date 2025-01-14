@@ -63,7 +63,6 @@ button,
 [type=reset],
 [type=submit] {
     -webkit-appearance: button;
-    appearance: button;
     background-color: transparent;
     background-image: none;
     cursor: pointer
@@ -104,6 +103,11 @@ img, video {
 input {
     font-size: 1rem;
     line-height: 1.5rem;
+}
+
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
+    overflow-clip-margin: 0 !important;
+    overflow: clip !important;
 }
 
 [type=search] {

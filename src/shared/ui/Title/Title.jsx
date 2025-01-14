@@ -1,7 +1,21 @@
+import {forwardRef} from "react";
 import styles from './Title.module.css'
 
-export default function Title({ children, className, size, ...props }) {
+const Title = forwardRef(function Title(
+{
+    children, className, size, ...props
+},
+ref) {
     return (
-        <span className={`${styles.title} ${className}`} style={{fontSize: `${size}px`}} {...props}>{children}</span>
+        <span
+            ref={ref}
+            className={`${styles.title} ${className}`}
+            style={{fontSize: `${size}px`}}
+            {...props}
+        >
+            {children}
+        </span>
     )
-}
+})
+
+export default Title;

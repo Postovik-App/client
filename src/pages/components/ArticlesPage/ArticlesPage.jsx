@@ -8,7 +8,7 @@ import styles from './ArticlesPage.module.css'
 
 const fakeArticles = [{
     id: 1,
-    title: "Article #1ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+    title: "Article #1",
 }]
 
 export default function ArticlesPage() {
@@ -19,7 +19,6 @@ export default function ArticlesPage() {
 
     useBackButton();
     useMainButton({text: "New Article"}, handleMainButtonClick);
-
 
     if (!fakeArticles.length) {
         return (

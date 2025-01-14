@@ -5,26 +5,25 @@ import {
     miniApp,
     initData,
     mainButton,
+    secondaryButton,
     $debug,
     init as initSDK,
 } from "@telegram-apps/sdk-react";
 import initTheme from "@/app/helpers/initTheme.js";
 
 export function init(debug) {
-    $debug.set(debug)
-
+    setDebug(debug);
     initSDK();
+    checkMiniAppSupported()
+    mountDependencies()
+    initTheme();
+}
 
-    debug && 
-        import("eruda").then((lib) => lib.default.init()).catch(console.error)
-
-    if (!backButton.isSupported || !miniApp.isSupported()) {
-        throw new Error("ERR_NOT_SUPPORTED")
-    }
-
+function mountDependencies() {
     backButton.mount()
     miniApp.mount()
     mainButton.mount()
+    secondaryButton.mount()
     themeParams.mount()
     initData.restore();
     void viewport
@@ -38,6 +37,16 @@ export function init(debug) {
 
     miniApp.bindCssVars()
     themeParams.bindCssVars()
+}
 
-    initTheme();
+function setDebug({ debug }) {
+    $debug.set(debug)
+    debug &&
+        import("eruda").then((lib) => lib.default.init()).catch(console.error)
+}
+
+function checkMiniAppSupported() {
+    if (!backButton.isSupported || !miniApp.isSupported()) {
+        throw new Error("ERR_NOT_SUPPORTED")
+    }
 }
