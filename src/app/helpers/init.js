@@ -6,6 +6,7 @@ import {
     initData,
     mainButton,
     secondaryButton,
+    settingsButton,
     $debug,
     init as initSDK,
 } from "@telegram-apps/sdk-react";
@@ -21,6 +22,7 @@ export function init(debug) {
 
 function mountDependencies() {
     backButton.mount()
+    settingsButton.mount()
     miniApp.mount()
     mainButton.mount()
     secondaryButton.mount()

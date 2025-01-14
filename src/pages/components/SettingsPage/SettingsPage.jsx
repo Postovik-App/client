@@ -9,7 +9,7 @@ import styles from "./SettingsPage.module.css"
 
 export default function SettingsPage() {
     const navigate = useNavigate();
-    useBackButton()
+    useBackButton('/')
     useMainButton({text: 'Save'}, () => navigate('/'))
 
     return (

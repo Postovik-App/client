@@ -4,7 +4,7 @@ import { AppRouter } from "../routes/AppRouter"
 import { 
   mountSwipeBehavior,
   unmountSwipeBehavior,
-  disableVerticalSwipes
+  disableVerticalSwipes,
 } from "@telegram-apps/sdk-react"
 
 function App() {
