@@ -25,7 +25,6 @@ export default function SettingsForm() {
                         required={item.required}
                         name={item.name}
                         id={item.id}
-                        autocomplete={false}
                     />
                 ))}
             </Form>

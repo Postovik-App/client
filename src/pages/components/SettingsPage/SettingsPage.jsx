@@ -5,7 +5,8 @@ import Breadcrumbs from "@/shared/ui/Breadcrumbs/Breadcrumbs.jsx";
 import SettingsForm from "@/widgets/components/SettingsForm/SettingsForm.jsx";
 import {useMainButton} from "@/shared/lib/hooks/useMainButton.js";
 import styles from "./SettingsPage.module.css"
-
+import {SettingsCells} from "@/widgets/components/SettingsCells/SettingsCells.jsx";
+import {settingsCells} from "@/pages/const/settings.js";
 
 export default function SettingsPage() {
     const navigate = useNavigate();
@@ -17,6 +18,7 @@ export default function SettingsPage() {
             <Breadcrumbs>Settings</Breadcrumbs>
             <UserAvatar className={styles.avatar}/>
             <SettingsForm/>
+            <SettingsCells cells={settingsCells} className={styles.list}/>
         </div>
     )
 }

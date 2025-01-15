@@ -2,7 +2,7 @@ import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 import {settingsButton} from "@telegram-apps/sdk-react";
 
-export function SettingsButtonManipulator() {
+export default function SettingsButtonManipulator() {
     const navigate = useNavigate()
 
     useEffect(() => {

@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--bg-color);
+    cursor: pointer;
+    justify-content: space-between;
+    align-content: center;
+}
+.wrapper:active {
+    opacity: 0.8;
+}
+
+.before__wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.after__wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.label {
+    color: var(--hint-color);
+}
