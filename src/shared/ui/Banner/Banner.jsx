@@ -16,7 +16,7 @@ export default function Banner({
                     <Title size={14}>
                         {header}
                     </Title>
-                    <Text size={14}>{description}</Text>
+                    <Text size={14} className={styles.description}>{description}</Text>
                 </div>
                 <div className={styles.button__container}>
                     <Button>
