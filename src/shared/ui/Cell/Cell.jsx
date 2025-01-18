@@ -11,7 +11,7 @@ export function Cell({
     ...restProps
 }) {
     return (
-        <div
+        <label
             className={classNames(styles.wrapper, className)}
             {...restProps}
         >
@@ -23,6 +23,6 @@ export function Cell({
                 <Text size={17} className={styles.label}>{navigationLabel}</Text>
                 {after}
             </div>
-        </div>
+        </label>
     )
 }

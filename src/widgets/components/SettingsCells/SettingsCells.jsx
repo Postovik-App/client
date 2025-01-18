@@ -12,7 +12,7 @@ export function SettingsCells({ className, cells, ...restProps }) {
         <div className={className} {...restProps}>
             <List>
                 <Cell
-                    before={<PersonIcon/>}
+                before={<PersonIcon/>}
                     after={<ArrowRightIcon/>}
                     title={'Account'}
                     onClick={() => navigate('/settings/account')}
@@ -26,6 +26,7 @@ export function SettingsCells({ className, cells, ...restProps }) {
                             title={cell.title}
                             after={<cell.after/>}
                             navigationLabel={cell.navigationLabel}
+                            onClick={() => navigate(cell.navigateUrl)}
                         />
                         {index < cells.length - 1 && <Divider/>}
                     </div>

@@ -9,6 +9,7 @@ export const settingsCells = [
         navigationLabel: 'English',
         before: GlobeIcon,
         after: ArrowRightIcon,
+        navigateUrl: '/settings/language',
     },
     {
         id: 2,
@@ -16,5 +17,6 @@ export const settingsCells = [
         navigationLabel: 'Dark',
         before: ThemeIcon,
         after: ArrowRightIcon,
+        navigateUrl: '/settings/theme',
     }
 ]
