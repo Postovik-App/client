@@ -7,14 +7,12 @@ export default function PremiumBanner() {
     const navigate = useNavigate();
 
     return (
-        <div>
-            <Banner
-                header={bannerText['title']}
-                description={bannerText['description']}
-                className={styles.banner}
-                buttonTitle={bannerText['buttonTitle']}
-                onClick={() => navigate('/premium')}
-            />
-        </div>
+        <Banner
+            header={bannerText['title']}
+            description={bannerText['description']}
+            className={styles.banner}
+            buttonTitle={bannerText['buttonTitle']}
+            onClick={() => navigate('/premium')}
+        />
     )
 }

@@ -1,13 +1,3 @@
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 67px;
-    border-radius: 15px;
-}
-
 .banner {
     display: flex;
     padding: 12px;

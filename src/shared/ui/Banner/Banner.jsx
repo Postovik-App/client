@@ -2,6 +2,7 @@ import styles from './Banner.module.css'
 import Text from '@/shared/ui/Text/Text.jsx'
 import Title from "@/shared/ui/Title/Title.jsx";
 import Button from "@/shared/ui/Button/Button.jsx";
+import classNames from "@/shared/lib/helpers/classNames.js";
 
 export default function Banner({
     header,
@@ -11,8 +12,10 @@ export default function Banner({
     ...restProps
 }) {
     return (
-        <div className={styles.container} {...restProps}>
-            <div className={`${styles.banner} ${className}`}>
+            <div
+                className={classNames(styles.banner, className)}
+                {...restProps}
+            >
                 <div className={`${styles.text__container}`}>
                     <Title size={14}>
                         {header}
@@ -25,6 +28,5 @@ export default function Banner({
                     </Button>
                 </div>
             </div>
-        </div>
     );
 }
