@@ -1,7 +1,8 @@
 import styles from './Divider.module.css'
+import classNames from "@/shared/lib/helpers/classNames.js";
 
-export function Divider() {
+export function Divider({ className }) {
     return (
-        <div className={styles.divider}></div>
+        <div className={classNames(styles.divider, className)}></div>
     )
 }

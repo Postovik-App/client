@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     width: 100%;
-    padding: 16px;
+    padding: 13px;
     background-color: var(--bg-color);
     cursor: pointer;
     justify-content: space-between;
@@ -10,7 +10,7 @@
 
 .before__wrapper {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -22,4 +22,10 @@
 
 .label {
     color: var(--hint-color);
+}
+
+.text__wrapper {
+    display: flex;
+    flex-direction: column;
+
 }

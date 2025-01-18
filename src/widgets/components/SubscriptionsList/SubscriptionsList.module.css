@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100%;
+}
+
+.divider {
+    width: 85% !important;
+}
+
+.description {
+    color: var(--hint-color);
+    font-size: 15px !important;
+}

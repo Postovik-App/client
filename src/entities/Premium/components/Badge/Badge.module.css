@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3px 15px;
+    padding: 2px 15px;
     background: conic-gradient(from 48.88deg at 50% 50%, #4E4EF6 0deg, #4E4EF6 206.64deg, #4747E4 360deg);
-    border-radius: 10px;
+    border-radius: 15px;
     font-family: SFRounded, sans-serif;
 }
 

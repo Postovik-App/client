@@ -5,7 +5,7 @@
     flex-direction: column;
     width: 100%;
     gap: 10px;
-    padding: 16px 40px;
+    padding: 16px 35px;
 }
 
 .title__wrapper {
@@ -18,4 +18,5 @@
 .text__wrapper {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }

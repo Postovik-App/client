@@ -7,6 +7,7 @@ export function Cell({
     after,
     navigationLabel,
     title,
+    description,
     className,
     ...restProps
 }) {
@@ -17,7 +18,10 @@ export function Cell({
         >
             <div className={styles.before__wrapper}>
                 {before}
-                <Text size={17}>{title}</Text>
+                <div className={styles.text__wrapper}>
+                    <Text size={17}>{title}</Text>
+                    {description}
+                </div>
             </div>
             <div className={styles.after__wrapper}>
                 <Text size={17} className={styles.label}>{navigationLabel}</Text>
