@@ -1,28 +1,28 @@
-import {List} from "@/shared/ui/List/List.jsx";
+import styles from './LanguageList.module.css'
 import Form from "@/shared/ui/Form/Form.jsx";
+import {availableLanguages} from "@/widgets/const/language.js";
 import {Cell} from "@/shared/ui/Cell/Cell.jsx";
 import {Checkbox} from "@/shared/ui/Checkbox/Checkbox.jsx";
 import {Divider} from "@/shared/ui/Divider/Divider.jsx";
-import {availableThemes} from "@/widgets/const/theme.js";
-import styles from './ThemeList.module.css'
+import {List} from "@/shared/ui/List/List.jsx";
 
-export function ThemeList() {
+export function LanguageList() {
     return (
         <List className={styles.list}>
-            <Form name='theme-select'>
-                {availableThemes.map((theme, index) => (
-                    <div key={theme.id}>
+            <Form name='language-select'>
+                {availableLanguages.map((language, index) => (
+                    <div key={language.id}>
                         <Cell
-                            title={theme.title}
+                            title={language.title}
                             before={
                                 <Checkbox
-                                    name='theme-select'
-                                    value={theme.name}
+                                    name='language-select'
+                                    value={language.name}
                                     isShowSelectIcon={false}
                                 />
                             }
                         />
-                        {index < availableThemes.length - 1 && <Divider />}
+                        {index < availableLanguages.length - 1 && <Divider />}
                     </div>
                 ))}
             </Form>
