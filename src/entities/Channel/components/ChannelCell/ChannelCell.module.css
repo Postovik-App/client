@@ -1,0 +1,17 @@
+.cell {
+    background-color: inherit;
+    padding: 10px 0;
+}
+
+.subs__wrapper {
+    display: flex;
+    gap: 5px;
+}
+
+.count {
+    color: #CBCBCB;
+}
+
+.subs {
+    color: var(--hint-color);
+}
