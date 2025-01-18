@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    gap: 5px;
+}
+
+.count {
+    color: #CBCBCB;
+}
+
+.subs {
+    color: var(--hint-color);
+}

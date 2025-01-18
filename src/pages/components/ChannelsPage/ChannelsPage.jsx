@@ -26,7 +26,7 @@ export function ChannelsPage() {
         navigate('/channels/new');
     }
 
-    useBackButton();
+    useBackButton('/');
     useMainButton({text: "Link Channel"}, handleMainButtonClick);
 
     if (!fakeChannels) {

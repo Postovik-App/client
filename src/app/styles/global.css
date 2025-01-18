@@ -43,7 +43,6 @@ body {
 }
 
 #root {
-    padding: 15px 15px;
     overflow-y: scroll;
     height: 100%;
 }
