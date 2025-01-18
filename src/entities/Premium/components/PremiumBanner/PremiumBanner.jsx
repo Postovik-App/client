@@ -1,8 +1,11 @@
 import styles from './PremiumBanner.module.css'
 import Banner from "@/shared/ui/Banner/Banner.jsx";
 import {bannerText} from "@/entities/Premium/const/banner.js";
+import {useNavigate} from "react-router-dom";
 
 export default function PremiumBanner() {
+    const navigate = useNavigate();
+
     return (
         <div>
             <Banner
@@ -10,6 +13,7 @@ export default function PremiumBanner() {
                 description={bannerText['description']}
                 className={styles.banner}
                 buttonTitle={bannerText['buttonTitle']}
+                onClick={() => navigate('/premium')}
             />
         </div>
     )

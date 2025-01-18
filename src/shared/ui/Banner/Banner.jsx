@@ -8,9 +8,10 @@ export default function Banner({
     description,
     buttonTitle,
     className,
+    ...restProps
 }) {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} {...restProps}>
             <div className={`${styles.banner} ${className}`}>
                 <div className={`${styles.text__container}`}>
                     <Title size={14}>

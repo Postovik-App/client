@@ -5,6 +5,7 @@ import Breadcrumbs from "@/shared/ui/Breadcrumbs/Breadcrumbs.jsx";
 import SettingsForm from "@/widgets/components/SettingsForm/SettingsForm.jsx";
 import {useMainButton} from "@/shared/lib/hooks/useMainButton.js";
 import styles from "./EditAccountPage.module.css"
+import {Layout} from "@/pages/components/Layout/Layout.jsx";
 
 export function EditAccountPage() {
     const navigate = useNavigate();
@@ -12,10 +13,10 @@ export function EditAccountPage() {
     useMainButton({text: 'Save'}, () => navigate('/'))
 
     return (
-        <div>
+        <Layout>
             <Breadcrumbs>Account</Breadcrumbs>
             <UserAvatar className={styles.avatar}/>
             <SettingsForm/>
-        </div>
+        </Layout>
     )
 }

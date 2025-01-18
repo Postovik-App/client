@@ -5,6 +5,7 @@ import {useMainButton} from "@/shared/lib/hooks/useMainButton.js";
 import ArticlesWidget from "@/widgets/components/ArticlesWidget/ArticlesWidget.jsx";
 import Breadcrumbs from "@/shared/ui/Breadcrumbs/Breadcrumbs.jsx";
 import styles from './ArticlesPage.module.css'
+import {Layout} from "@/pages/components/Layout/Layout.jsx";
 
 const fakeArticles = [{
     id: 1,
@@ -32,9 +33,9 @@ export default function ArticlesPage() {
     }
 
     return (
-        <>
+        <Layout>
             <Breadcrumbs className={styles.breadcrumbs}>Articles</Breadcrumbs>
             <ArticlesWidget articles={fakeArticles} />
-        </>
+        </Layout>
     )
 }

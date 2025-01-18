@@ -3,6 +3,7 @@ import {firstLaunchChatText} from "@/pages/const/firstLaunch.js";
 import {useMainButton} from "@/shared/lib/hooks/useMainButton.js";
 import {useSecondaryButton} from "@/shared/lib/hooks/useSecondaryButton.js";
 import {useNavigate} from "react-router-dom";
+import {Layout} from "@/pages/components/Layout/Layout.jsx";
 
 export default function FirstLaunch() {
     const navigate = useNavigate();
@@ -20,8 +21,8 @@ export default function FirstLaunch() {
     useSecondaryButton(secondaryButtonParams, handleSecondaryButtonClick);
 
     return (
-        <>
+        <Layout>
             <EyesChat text={firstLaunchChatText} />
-        </>
+        </Layout>
     )
 }

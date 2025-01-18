@@ -1,0 +1,17 @@
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 15px;
+    background: conic-gradient(from 48.88deg at 50% 50%, #4E4EF6 0deg, #4E4EF6 206.64deg, #4747E4 360deg);
+    border-radius: 10px;
+    font-family: SFRounded, sans-serif;
+}
+
+.badge__title {
+    font-size: 15px !important;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0 !important;
+}
