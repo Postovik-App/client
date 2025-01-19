@@ -1,3 +1,3 @@
 export function getAcronym(name) {
-    return name[0]
+  return name[0];
 }

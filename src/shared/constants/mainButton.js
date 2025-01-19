@@ -1,3 +1,3 @@
 export const defaultMainButtonParams = {
-    text: 'Click',
-}
+  text: "Click",
+};

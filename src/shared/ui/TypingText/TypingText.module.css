@@ -1,12 +1,12 @@
 .typing__text {
-    animation: typing 3s;
+  animation: typing 3s;
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

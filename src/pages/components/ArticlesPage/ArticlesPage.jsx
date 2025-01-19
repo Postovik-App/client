@@ -1,41 +1,43 @@
 import NotFound from "@/widgets/components/NotFound/NotFound.jsx";
-import {useBackButton} from "@/shared/lib/hooks/useBackButton.js";
-import {useNavigate} from "react-router-dom";
-import {useMainButton} from "@/shared/lib/hooks/useMainButton.js";
+import { useBackButton } from "@/shared/lib/hooks/useBackButton.js";
+import { useNavigate } from "react-router-dom";
+import { useMainButton } from "@/shared/lib/hooks/useMainButton.js";
 import ArticlesWidget from "@/widgets/components/ArticlesWidget/ArticlesWidget.jsx";
 import Breadcrumbs from "@/shared/ui/Breadcrumbs/Breadcrumbs.jsx";
-import styles from './ArticlesPage.module.css'
-import {Layout} from "@/pages/components/Layout/Layout.jsx";
+import styles from "./ArticlesPage.module.css";
+import { Layout } from "@/pages/components/Layout/Layout.jsx";
 
-const fakeArticles = [{
+const fakeArticles = [
+  {
     id: 1,
     title: "Article #1",
-}]
+  },
+];
 
 export default function ArticlesPage() {
-    const navigate = useNavigate();
-    const handleMainButtonClick = () => {
-        navigate('/articles/new');
-    }
+  const navigate = useNavigate();
+  const handleMainButtonClick = () => {
+    navigate("/articles/new");
+  };
 
-    useBackButton('/');
-    useMainButton({text: "New Article"}, handleMainButtonClick);
+  useBackButton("/");
+  useMainButton({ text: "New Article" }, handleMainButtonClick);
 
-    if (!fakeArticles.length) {
-        return (
-            <NotFound
-                title='No articles yet'
-                tendText={'Change it!'}
-                className={styles.notFound}
-                tendTextOnClick={handleMainButtonClick}
-            />
-        );
-    }
-
+  if (!fakeArticles.length) {
     return (
-        <Layout>
-            <Breadcrumbs className={styles.breadcrumbs}>Articles</Breadcrumbs>
-            <ArticlesWidget articles={fakeArticles} />
-        </Layout>
-    )
+      <NotFound
+        title="No articles yet"
+        tendText={"Change it!"}
+        className={styles.notFound}
+        tendTextOnClick={handleMainButtonClick}
+      />
+    );
+  }
+
+  return (
+    <Layout>
+      <Breadcrumbs className={styles.breadcrumbs}>Articles</Breadcrumbs>
+      <ArticlesWidget articles={fakeArticles} />
+    </Layout>
+  );
 }

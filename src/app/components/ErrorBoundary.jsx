@@ -1,32 +1,32 @@
 import { Component } from "react";
 
 class ErrorBoundary extends Component {
-    state = {}
-    
-    static getDerivedStateFromError(error) {
-        return { error };
-    }
+  state = {};
 
-    componentDidCatch(error) {
-        this.setState({ error })
-    }
+  static getDerivedStateFromError(error) {
+    return { error };
+  }
 
-    render() {
-        const {
-            state: { error },
-            props: { fallback: Fallback, children }
-        } = this;
-        
-        return "error" in this.state ? (
-            typeof Fallback === "function" ? (
-                <Fallback error={error} />
-            ) : (
-                Fallback
-            )
-        ) : (
-            children
-        );
-    }
+  componentDidCatch(error) {
+    this.setState({ error });
+  }
+
+  render() {
+    const {
+      state: { error },
+      props: { fallback: Fallback, children },
+    } = this;
+
+    return "error" in this.state ? (
+      typeof Fallback === "function" ? (
+        <Fallback error={error} />
+      ) : (
+        Fallback
+      )
+    ) : (
+      children
+    );
+  }
 }
 
 export default ErrorBoundary;

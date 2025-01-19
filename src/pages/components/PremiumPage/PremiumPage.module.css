@@ -1,6 +1,6 @@
-@import url('/src/shared/fonts/SFPro/stylesheet.css');
+@import url("/src/shared/fonts/SFPro/stylesheet.css");
 
 .layout {
-    font-family: 'SF Pro Text', Arial, serif;
-    gap: 15px;
+  font-family: "SF Pro Text", Arial, serif;
+  gap: 15px;
 }

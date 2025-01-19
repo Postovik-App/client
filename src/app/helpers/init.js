@@ -1,56 +1,56 @@
 import {
-    backButton,
-    viewport,
-    themeParams,
-    miniApp,
-    initData,
-    mainButton,
-    secondaryButton,
-    mountClosingBehavior,
-    settingsButton,
-    $debug,
-    init as initSDK,
+  backButton,
+  viewport,
+  themeParams,
+  miniApp,
+  initData,
+  mainButton,
+  secondaryButton,
+  mountClosingBehavior,
+  settingsButton,
+  $debug,
+  init as initSDK,
 } from "@telegram-apps/sdk-react";
 import initTheme from "@/app/helpers/initTheme.js";
 
 export function init(debug) {
-    setDebug(debug);
-    initSDK();
-    checkMiniAppSupported()
-    mountDependencies()
-    initTheme();
+  setDebug(debug);
+  initSDK();
+  checkMiniAppSupported();
+  mountDependencies();
+  initTheme();
 }
 
 function mountDependencies() {
-    mountClosingBehavior();
-    backButton.mount()
-    settingsButton.mount()
-    miniApp.mount()
-    mainButton.mount()
-    secondaryButton.mount()
-    themeParams.mount()
-    initData.restore();
-    void viewport
-        .mount()
-        .catch((e) => {
-            console.error("Something went wrong mounting the viewport", e)
-        })
-        .then(() => {
-            viewport.bindCssVars()
-        })
+  mountClosingBehavior();
+  backButton.mount();
+  settingsButton.mount();
+  miniApp.mount();
+  mainButton.mount();
+  secondaryButton.mount();
+  themeParams.mount();
+  initData.restore();
+  void viewport
+    .mount()
+    .catch((e) => {
+      console.error("Something went wrong mounting the viewport", e);
+    })
+    .then(() => {
+      viewport.bindCssVars();
+    });
 
-    miniApp.bindCssVars()
-    themeParams.bindCssVars()
+  miniApp.bindCssVars();
+  themeParams.bindCssVars();
 }
 
 function setDebug({ debug }) {
-    $debug.set(debug)
-    debug &&
-        import("eruda").then((lib) => lib.default.init()).catch(console.error)
+  $debug.set(debug);
+  debug &&
+    import("eruda").then((lib) => lib.default.init()).catch(console.error);
 }
 
 function checkMiniAppSupported() {
-    if (!backButton.isSupported || !miniApp.isSupported()) {
-        throw new Error("ERR_NOT_SUPPORTED")
-    }
+  if (!backButton.isSupported || !miniApp.isSupported()) {
+    throw new Error("ERR_NOT_SUPPORTED");
+  }
 }

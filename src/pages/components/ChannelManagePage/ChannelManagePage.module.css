@@ -1,9 +1,9 @@
 .layout {
-    gap: 25px;
-    padding: 0;
+  gap: 25px;
+  padding: 0;
 }
 
 .divider {
-    width: 100% !important;
-    border-top: 1px solid #707579 !important;
+  width: 100% !important;
+  border-top: 1px solid #707579 !important;
 }

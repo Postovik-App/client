@@ -1,31 +1,30 @@
 .wrapper {
-    display: flex;
-    width: 100%;
-    padding: 13px;
-    background-color: var(--bg-color);
-    cursor: pointer;
-    justify-content: space-between;
-    align-content: center;
+  display: flex;
+  width: 100%;
+  padding: 13px;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .before__wrapper {
-    display: flex;
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .after__wrapper {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .label {
-    color: var(--hint-color);
+  color: var(--hint-color);
 }
 
 .text__wrapper {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }

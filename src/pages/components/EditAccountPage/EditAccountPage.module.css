@@ -1,10 +1,10 @@
 .avatar {
-    margin-top: 4px;
+  margin-top: 4px;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    gap: 20px
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
 }

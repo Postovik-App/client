@@ -1,7 +1,7 @@
-import { isValidElement, useState } from 'react';
-import styles from './Image.module.css';
+import { isValidElement, useState } from "react";
+import styles from "./Image.module.css";
 
-export default function Image ({
+export default function Image({
   size = 40,
   className,
   alt,
@@ -24,7 +24,8 @@ export default function Image ({
   const [failed, setFailed] = useState(false);
 
   const hasSrc = src || srcSet;
-  const needShowFallbackIcon = (failed || !hasSrc) && isValidElement(fallbackIcon);
+  const needShowFallbackIcon =
+    (failed || !hasSrc) && isValidElement(fallbackIcon);
 
   const handleImageLoad = (event) => {
     if (loaded) {
@@ -56,7 +57,7 @@ export default function Image ({
       {hasSrc && (
         <img
           alt={alt}
-          className={`${styles.image}  ${failed && styles['failed']}`}
+          className={`${styles.image}  ${failed && styles["failed"]}`}
           crossOrigin={crossOrigin}
           decoding={decoding}
           loading={loading}
@@ -69,8 +70,10 @@ export default function Image ({
           onError={handleImageError}
         />
       )}
-      {needShowFallbackIcon && <div className={styles.fallback}>{fallbackIcon}</div>}
+      {needShowFallbackIcon && (
+        <div className={styles.fallback}>{fallbackIcon}</div>
+      )}
       {children}
     </div>
   );
-};
+}

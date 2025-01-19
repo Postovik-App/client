@@ -1,3 +1,3 @@
 export function formatName({ user }) {
-    return `${user.firstName} ${user.lastName}`
+  return `${user.firstName} ${user.lastName}`;
 }

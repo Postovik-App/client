@@ -1,27 +1,27 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 
-import { AppRouter } from "../routes/AppRouter"
-import { 
+import { AppRouter } from "../routes/AppRouter";
+import {
   mountSwipeBehavior,
   unmountSwipeBehavior,
   disableVerticalSwipes,
-} from "@telegram-apps/sdk-react"
+} from "@telegram-apps/sdk-react";
 
 function App() {
   useEffect(() => {
-    mountSwipeBehavior()
-    disableVerticalSwipes()
+    mountSwipeBehavior();
+    disableVerticalSwipes();
 
     return () => {
-      unmountSwipeBehavior()
-    }
-  })
+      unmountSwipeBehavior();
+    };
+  });
 
   return (
     <>
-      <AppRouter/>
+      <AppRouter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

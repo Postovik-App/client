@@ -1,15 +1,20 @@
-import {useNavigate} from "react-router-dom";
-import SettingsIcon from "@/shared/assets/settings.svg?react"
-import styles from './SettingsIcon.module.css'
+import { useNavigate } from "react-router-dom";
+import SettingsIcon from "@/shared/assets/settings.svg?react";
+import styles from "./SettingsIcon.module.css";
 
 function SettingsIconButton() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    return (
-        <div className={styles.container} onClick={() => {navigate('/settings')}}>
-            <SettingsIcon/>
-        </div>
-    );
+  return (
+    <div
+      className={styles.container}
+      onClick={() => {
+        navigate("/settings");
+      }}
+    >
+      <SettingsIcon />
+    </div>
+  );
 }
 
 export default SettingsIconButton;

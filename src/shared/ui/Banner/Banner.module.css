@@ -1,25 +1,25 @@
 .banner {
-    display: flex;
-    padding: 12px;
-    border-radius: 15px;
+  display: flex;
+  padding: 12px;
+  border-radius: 15px;
 }
 
 .text__container {
-    display: flex;
-    flex-direction: column;
-    max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
 }
 
 .button__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-grow: 1;
-    margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 15px;
 }
 
 @media screen and (max-width: 400px) {
-    .description {
-        display: none;
-    }
+  .description {
+    display: none;
+  }
 }
