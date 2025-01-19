@@ -15,7 +15,9 @@ export function ChannelCell({
         <Cell
             before={<Avatar photoSrc={photoSource} size={40}/>}
             title={name}
-            after={<SubscribersCount>{subscribersCount}</SubscribersCount>}
+            after={
+                <SubscribersCount isShort={true}>{subscribersCount}</SubscribersCount>
+            }
             className={classNames(styles.cell, className)}
             {...restProps}
         />

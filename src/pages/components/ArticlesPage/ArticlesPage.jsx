@@ -18,7 +18,7 @@ export default function ArticlesPage() {
         navigate('/articles/new');
     }
 
-    useBackButton();
+    useBackButton('/');
     useMainButton({text: "New Article"}, handleMainButtonClick);
 
     if (!fakeArticles.length) {

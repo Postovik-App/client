@@ -2,6 +2,7 @@ import {Layout} from "@/pages/components/Layout/Layout.jsx";
 import {useNavigate} from "react-router-dom";
 import {useBackButton} from "@/shared/lib/hooks/useBackButton.js";
 import {useMainButton} from "@/shared/lib/hooks/useMainButton.js";
+import {closeMiniApp} from "@telegram-apps/sdk-react";
 import NotFound from "@/widgets/components/NotFound/NotFound.jsx";
 import styles from "./ChannelsPage.module.css"
 import Breadcrumbs from "@/shared/ui/Breadcrumbs/Breadcrumbs.jsx";
@@ -21,9 +22,8 @@ const fakeChannels = [
 ]
 
 export function ChannelsPage() {
-    const navigate = useNavigate();
     const handleMainButtonClick = () => {
-        navigate('/channels/new');
+        closeMiniApp(true);
     }
 
     useBackButton('/');

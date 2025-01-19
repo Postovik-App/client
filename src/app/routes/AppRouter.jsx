@@ -10,6 +10,7 @@ import {LanguagePage} from "@/pages/components/LanguagePage/LanguagePage.jsx";
 import {PremiumPage} from "@/pages/components/PremiumPage/PremiumPage.jsx";
 import {ChannelsPage} from "@/pages/components/ChannelsPage/ChannelsPage.jsx";
 import {ChannelManagePage} from "@/pages/components/ChannelManagePage/ChannelManagePage.jsx";
+import {PostArticle} from "@/pages/components/PostArticle/PostArticle.jsx";
 
 export function AppRouter() {
     return (
@@ -22,6 +23,7 @@ export function AppRouter() {
                 <Route path={'/settings/theme'} element={<ThemePage/>} />
                 <Route path={'/settings/language'} element={<LanguagePage/>} />
                 <Route path={'/articles'} element={<ArticlesPage/>} />
+                <Route path={'/articles/new'} element={<PostArticle/>} />
                 <Route path={'/channels'} element={<ChannelsPage/>} />
                 <Route path={'/channels/info'} element={<ChannelManagePage/>} />
                 <Route path={'/first-launch'} element={<FirstLaunch/>} />

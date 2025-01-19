@@ -6,6 +6,7 @@ import {
     initData,
     mainButton,
     secondaryButton,
+    mountClosingBehavior,
     settingsButton,
     $debug,
     init as initSDK,
@@ -21,6 +22,7 @@ export function init(debug) {
 }
 
 function mountDependencies() {
+    mountClosingBehavior();
     backButton.mount()
     settingsButton.mount()
     miniApp.mount()

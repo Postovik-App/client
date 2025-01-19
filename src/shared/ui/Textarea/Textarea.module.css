@@ -1,0 +1,6 @@
+.textarea {
+    width: 100%;
+    background: inherit;
+    font-size: 17px;
+    resize: none;
+}
