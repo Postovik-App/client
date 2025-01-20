@@ -1,0 +1,28 @@
+import EyesChat from "@/widgets/EyesChat/EyesChat.jsx";
+import { firstLaunchChatText } from "@/pages/FirstLaunch/const/firstLaunch.js";
+import { useMainButton } from "@/shared/lib/hooks/useMainButton.js";
+import { useSecondaryButton } from "@/shared/lib/hooks/useSecondaryButton.js";
+import { useNavigate } from "react-router-dom";
+import { Layout } from "@/pages/Layout/Layout.jsx";
+
+export default function FirstLaunch() {
+  const navigate = useNavigate();
+  const mainButtonParams = { text: "Leeets do it!" };
+  const secondaryButtonParams = { text: "Hell Nah...", position: "bottom" };
+
+  const handleMainButtonClick = () => {
+    navigate("/set-up");
+  };
+  const handleSecondaryButtonClick = () => {
+    navigate("/");
+  };
+
+  useMainButton(mainButtonParams, handleMainButtonClick);
+  useSecondaryButton(secondaryButtonParams, handleSecondaryButtonClick);
+
+  return (
+    <Layout>
+      <EyesChat text={firstLaunchChatText} />
+    </Layout>
+  );
+}

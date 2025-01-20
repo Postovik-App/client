@@ -1,16 +1,16 @@
 import { Routes, BrowserRouter, Route, Navigate } from "react-router-dom";
-import { ProfilePage } from "../../pages/components/ProfilePage/ProfilePage";
-import { EditAccountPage } from "@/pages/components/EditAccountPage/EditAccountPage.jsx";
-import ArticlesPage from "@/pages/components/ArticlesPage/ArticlesPage.jsx";
-import FirstLaunch from "@/pages/components/FirstLaunch/FirstLaunch.jsx";
+import { ProfilePage } from "../../pages/ProfilePage/ProfilePage";
+import { EditAccountPage } from "@/pages/EditAccountPage/EditAccountPage.jsx";
+import { ArticlesPage } from "@/pages/ArticlesPage/index.jsx";
+import FirstLaunch from "@/pages/FirstLaunch/FirstLaunch.jsx";
 import SettingsButtonManipulator from "@/app/components/SettingsButtonManipulator.jsx";
-import { ThemePage } from "@/pages/components/ThemePage/ThemePage.jsx";
-import { SettingsPage } from "@/pages/components/SettingsPage/SettingsPage.jsx";
-import { LanguagePage } from "@/pages/components/LanguagePage/LanguagePage.jsx";
-import { PremiumPage } from "@/pages/components/PremiumPage/PremiumPage.jsx";
-import { ChannelsPage } from "@/pages/components/ChannelsPage/ChannelsPage.jsx";
-import { ChannelManagePage } from "@/pages/components/ChannelManagePage/ChannelManagePage.jsx";
-import { PostArticle } from "@/pages/components/PostArticle/PostArticle.jsx";
+import { ThemePage } from "@/pages/ThemePage/ThemePage.jsx";
+import { SettingsPage } from "@/pages/SettingsPage/SettingsPage.jsx";
+import { LanguagePage } from "@/pages/LanguagePage/LanguagePage.jsx";
+import { PremiumPage } from "@/pages/PremiumPage/PremiumPage.jsx";
+import { ChannelsPage } from "@/pages/ChannelsPage/ChannelsPage.jsx";
+import { ChannelManagePage } from "@/pages/ChannelManagePage/ChannelManagePage.jsx";
+import { PostArticle } from "@/pages/PostArticle/PostArticle.jsx";
 
 export function AppRouter() {
   return (

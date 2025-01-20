@@ -1,7 +1,7 @@
 import { ComponentPreview, Previews } from "@react-buddy/ide-toolbox";
 import { PaletteTree } from "./palette";
 import { TypingText } from "@/shared/ui/TypingText/TypingText.jsx";
-import EyesChat from "@/widgets/components/EyesChat/EyesChat.jsx";
+import EyesChat from "@/widgets/EyesChat/EyesChat.jsx";
 
 const ComponentPreviews = () => {
   return (

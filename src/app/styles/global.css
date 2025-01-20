@@ -27,6 +27,14 @@
   display: none;
 }
 
+::selection {
+  background: var(--link-color);
+}
+
+::-moz-selection {
+  background: var(--link-color);
+}
+
 html {
   font-family: "SFMono", "SF Pro Text", "SFRounded", Arial, serif;
   user-select: none;
